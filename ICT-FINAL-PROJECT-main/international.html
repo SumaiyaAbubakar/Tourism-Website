@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>International Tours | The Nouvelliste</title>
+
+    <link rel="stylesheet" href="style3.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION — SAME DOMESTIC STRUCTURE
+========================== -->
+<nav id="navbar">
+
+    <a href="home.html" class="brand">
+        <img id="logo" src="images/logo.png" alt="The Nouvelliste">
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="domestic.html">Domestic</a></li>
+            <li><a href="international.html" class="active">International</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li>
+                <a href="trip.html" class="nav-cta">
+                    Plan Your Trip <span>↗</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<!-- =========================
+     HERO — DOMESTIC STRUCTURE
+========================== -->
+<header class="domestic-hero international-hero">
+
+    <div class="hero-background">
+        <img src="images/switzerland1.jpg" alt="International travel landscape">
+    </div>
+
+    <div class="hero-overlay"></div>
+    <div class="hero-glow"></div>
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            Explore The World
+        </div>
+
+        <h1>
+            Discover the
+            <em>extraordinary</em>
+            abroad.
+        </h1>
+
+        <p>
+            From the snow-covered Alps of Switzerland to the turquoise horizons
+            of the Maldives, the ancient islands of Greece and the timeless
+            streets of Turkey — discover the world through unforgettable journeys.
+        </p>
+
+        <div class="hero-stats">
+
+            <div>
+                <strong>04</strong>
+                <span>Curated Tours</span>
+            </div>
+
+            <div>
+                <strong>07–10</strong>
+                <span>Days of Discovery</span>
+            </div>
+
+            <div>
+                <strong>04</strong>
+                <span>World-Class Destinations</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="hero-scroll">
+        <span></span>
+        Scroll to explore
+    </div>
+
+</header>
+
+
+<!-- =========================
+     MAIN
+========================== -->
+<main>
+
+    <!-- =========================
+         INTRO + SEARCH
+    ========================== -->
+    <section class="packages-intro">
+
+        <div class="intro-container">
+
+            <div class="intro-heading">
+
+                <div class="section-label">
+                    <span></span>
+                    Our International Collection
+                </div>
+
+                <h2>
+                    The world is closer
+                    than you <em>think.</em>
+                </h2>
+
+            </div>
+
+            <div class="intro-side">
+
+                <p>
+                    Carefully designed international experiences for travelers
+                    who want more than a destination. Choose your next escape,
+                    cross a border and let the journey begin.
+                </p>
+
+                <div class="search-box">
+
+                    <span class="search-icon">⌕</span>
+
+                    <input
+                        type="text"
+                        id="tourSearch"
+                        placeholder="Search a destination..."
+                        aria-label="Search international tours">
+
+                    <button id="clearSearch"
+                        type="button"
+                        aria-label="Clear search">
+                        ×
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TOUR COUNT + LIST
+    ========================== -->
+    <section class="tour-section">
+
+        <div class="tour-section-head">
+
+            <div>
+                <span class="section-small-title">
+                    Featured journeys
+                </span>
+
+                <h2>
+                    Find your next
+                    <em>horizon.</em>
+                </h2>
+            </div>
+
+            <p id="tourCount">
+                Showing 4 unforgettable journeys
+            </p>
+
+        </div>
+
+
+        <div class="main-container" id="tourList">
+
+            <!-- TOUR 1 -->
+            <article class="tour-package"
+                data-tour="Switzerland Zurich Lucerne Interlaken Geneva Alps">
+
+                <div class="tour-number">01</div>
+
+                <div class="package-image">
+                    <img src="images/Switzerland.png"
+                        alt="Switzerland International Tour Package">
+                    <div class="image-overlay"></div>
+
+                    <div class="duration-badge">
+                        <span class="duration-icon">◷</span>
+                        10 Days
+                    </div>
+                </div>
+
+                <div class="package-details">
+
+                    <div class="package-top">
+                        <span class="tour-location">
+                            Alpine Europe
+                        </span>
+
+                        <span class="availability">
+                            ● Available
+                        </span>
+                    </div>
+
+                    <h3 class="package-title">
+                        Switzerland
+                        <span>01</span>
+                    </h3>
+
+                    <p class="package-description">
+                        Experience the breathtaking beauty of Switzerland,
+                        known for snow-covered Alps, crystal-clear lakes,
+                        charming villages and luxurious lifestyle.
+                        Zurich · Lucerne · Interlaken · Jungfraujoch · Geneva ·
+                        Lake Geneva Cruise · Scenic Train Rides.
+                    </p>
+
+                    <div class="package-footer">
+
+                        <div class="price-wrapper">
+                            <span>Starting from</span>
+                            <strong class="price">Rs 420,000</strong>
+                        </div>
+
+                        <a href="switzerland_details.html"
+                            class="view-more-btn">
+                            Explore Journey
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- TOUR 2 -->
+            <article class="tour-package"
+                data-tour="Maldives Male Private Island Resort Water Snorkeling Sunset">
+
+                <div class="tour-number">02</div>
+
+                <div class="package-image">
+                    <img src="images/maldives.png"
+                        alt="Maldives International Tour Package">
+                    <div class="image-overlay"></div>
+
+                    <div class="duration-badge">
+                        <span class="duration-icon">◷</span>
+                        07 Days
+                    </div>
+                </div>
+
+                <div class="package-details">
+
+                    <div class="package-top">
+                        <span class="tour-location">
+                            Indian Ocean
+                        </span>
+
+                        <span class="availability">
+                            ● Available
+                        </span>
+                    </div>
+
+                    <h3 class="package-title">
+                        Maldives
+                        <span>02</span>
+                    </h3>
+
+                    <p class="package-description">
+                        Escape to turquoise waters, white sandy beaches and
+                        luxurious overwater villas. Designed for honeymooners,
+                        adventure seekers and relaxation lovers.
+                        Male City · Private Island Resort · Water Activities ·
+                        Snorkeling · Sunset Cruise.
+                    </p>
+
+                    <div class="package-footer">
+
+                        <div class="price-wrapper">
+                            <span>Starting from</span>
+                            <strong class="price">Rs 350,000</strong>
+                        </div>
+
+                        <a href="maldives_details.html"
+                            class="view-more-btn">
+                            Explore Journey
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- TOUR 3 -->
+            <article class="tour-package"
+                data-tour="Greece Athens Santorini Mykonos Islands Mediterranean">
+
+                <div class="tour-number">03</div>
+
+                <div class="package-image">
+                    <img src="images/greece.jpeg"
+                        alt="Greece International Tour Package">
+                    <div class="image-overlay"></div>
+
+                    <div class="duration-badge">
+                        <span class="duration-icon">◷</span>
+                        09 Days
+                    </div>
+                </div>
+
+                <div class="package-details">
+
+                    <div class="package-top">
+                        <span class="tour-location">
+                            Mediterranean
+                        </span>
+
+                        <span class="availability">
+                            ● Available
+                        </span>
+                    </div>
+
+                    <h3 class="package-title">
+                        Greece
+                        <span>03</span>
+                    </h3>
+
+                    <p class="package-description">
+                        Discover ancient history, stunning islands and
+                        Mediterranean charm. Athens · Santorini · Mykonos ·
+                        Acropolis · Island Hopping · Sunset Cruises ·
+                        Traditional Greek Cuisine.
+                    </p>
+
+                    <div class="package-footer">
+
+                        <div class="price-wrapper">
+                            <span>Starting from</span>
+                            <strong class="price">Rs 390,000</strong>
+                        </div>
+
+                        <a href="greece_details.html"
+                            class="view-more-btn">
+                            Explore Journey
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- TOUR 4 -->
+            <article class="tour-package"
+                data-tour="Turkey Istanbul Cappadocia Antalya Bosphorus Europe Asia">
+
+                <div class="tour-number">04</div>
+
+                <div class="package-image">
+                    <img src="images/turkey1.jpg"
+                        alt="Turkey International Tour Package">
+                    <div class="image-overlay"></div>
+
+                    <div class="duration-badge">
+                        <span class="duration-icon">◷</span>
+                        08 Days
+                    </div>
+                </div>
+
+                <div class="package-details">
+
+                    <div class="package-top">
+                        <span class="tour-location">
+                            Europe & Asia
+                        </span>
+
+                        <span class="availability">
+                            ● Available
+                        </span>
+                    </div>
+
+                    <h3 class="package-title">
+                        Turkey
+                        <span>04</span>
+                    </h3>
+
+                    <p class="package-description">
+                        Experience where East meets West through Istanbul,
+                        Cappadocia and the Mediterranean coast.
+                        Istanbul · Bosphorus Cruise · Cappadocia · Hot Air
+                        Balloon Ride · Antalya · Turkish Cuisine.
+                    </p>
+
+                    <div class="package-footer">
+
+                        <div class="price-wrapper">
+                            <span>Starting from</span>
+                            <strong class="price">Rs 310,000</strong>
+                        </div>
+
+                        <a href="turkey_details.html"
+                            class="view-more-btn">
+                            Explore Journey
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+        <div id="noResults" class="no-results">
+            No international journeys found. Try another destination.
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PREMIUM INTERNATIONAL EXPERIENCE
+         SAME POSITION / ROLE AS DOMESTIC CUSTOM TRIP
+    ========================== -->
+    <section class="custom-trip international-custom-trip">
+
+        <div class="custom-trip-content">
+
+            <div class="section-label light">
+                <span></span>
+                Beyond The Collection
+            </div>
+
+            <h2>
+                Your world.
+                <em>Your itinerary.</em>
+            </h2>
+
+            <p>
+                Want to combine destinations, extend your stay or design a
+                completely private international escape? Tell us how you want
+                to travel and our team will shape the journey around you.
+            </p>
+
+            <a href="trip.html" class="custom-trip-btn">
+                Build Your International Trip
+                <span>↗</span>
+            </a>
+
+        </div>
+
+        <div class="custom-trip-art">
+
+            <div class="world-orbit orbit-one"></div>
+            <div class="world-orbit orbit-two"></div>
+            <div class="world-orbit orbit-three"></div>
+
+            <div class="world-core">
+                <span>WORLD</span>
+                <small>YOUR WAY</small>
+            </div>
+
+            <div class="floating-tag tag-one">
+                ALPINE
+            </div>
+
+            <div class="floating-tag tag-two">
+                ISLAND
+            </div>
+
+            <div class="floating-tag tag-three">
+                CULTURE
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <img src="images/logo.png"
+                    alt="The Nouvelliste">
+
+                <p>
+                    Curated journeys, meaningful places and beautifully
+                    considered travel experiences across Pakistan and beyond.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Explore</h4>
+
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="domestic.html">Domestic Tours</a></li>
+                    <li><a href="international.html">International Tours</a></li>
+                    <li><a href="blogs.html">Travel Journal</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Plan</h4>
+
+                <ul>
+                    <li><a href="trip.html">Build Your Trip</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Travel Guide</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <span>Start a conversation</span>
+
+                <a href="contact.html">
+                    Plan your next journey ↗
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 The Nouvelliste. All rights reserved.
+            </span>
+
+            <span>
+                International Collection
+            </span>
+
+        </div>
+
+    </footer>
+
+</main>
+
+
+<!-- =========================
+     BACK TO TOP
+========================== -->
+<button id="backToTop"
+    class="back-to-top"
+    aria-label="Back to top">
+    ↑
+</button>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const navbar = document.getElementById("navbar");
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+    const body = document.body;
+
+    const searchInput = document.getElementById("tourSearch");
+    const clearSearch = document.getElementById("clearSearch");
+    const tourList = document.getElementById("tourList");
+    const tourCount = document.getElementById("tourCount");
+    const noResults = document.getElementById("noResults");
+    const backToTop = document.getElementById("backToTop");
+
+    const tours = [...document.querySelectorAll(".tour-package")];
+
+    /* NAVBAR */
+    function updateNavbar() {
+        if (window.scrollY > 35) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+
+        if (window.scrollY > 500) {
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+    }
+
+    window.addEventListener("scroll", updateNavbar);
+    updateNavbar();
+
+
+    /* MOBILE MENU */
+    menuToggle.addEventListener("click", function () {
+
+        const open = navMenu.classList.toggle("open");
+
+        menuToggle.classList.toggle("active", open);
+        menuToggle.setAttribute("aria-expanded", open);
+        body.classList.toggle("menu-open", open);
+
+    });
+
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navMenu.classList.remove("open");
+            menuToggle.classList.remove("active");
+            menuToggle.setAttribute("aria-expanded", "false");
+            body.classList.remove("menu-open");
+
+        });
+
+    });
+
+
+    /* SEARCH */
+    function filterTours() {
+
+        const query = searchInput.value.trim().toLowerCase();
+
+        let visible = 0;
+
+        tours.forEach(tour => {
+
+            const searchable =
+                (tour.dataset.tour + " " + tour.innerText).toLowerCase();
+
+            const match = searchable.includes(query);
+
+            tour.classList.toggle("hidden", !match);
+
+            if (match) visible++;
+
+        });
+
+        tourCount.textContent =
+            `Showing ${visible} unforgettable ${visible === 1 ? "journey" : "journeys"}`;
+
+        noResults.classList.toggle("show", visible === 0);
+
+    }
+
+    searchInput.addEventListener("input", filterTours);
+
+    clearSearch.addEventListener("click", function () {
+
+        searchInput.value = "";
+        searchInput.focus();
+        filterTours();
+
+    });
+
+
+    /* REVEAL */
+    const revealItems = document.querySelectorAll(
+        ".packages-intro, .tour-section, .tour-package, .custom-trip, .site-footer"
+    );
+
+    const observer = new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.08
+        }
+    );
+
+    revealItems.forEach(item => {
+        item.classList.add("reveal");
+        observer.observe(item);
+    });
+
+
+    /* CARD TILT */
+    tours.forEach(card => {
+
+        card.addEventListener("mousemove", function (event) {
+
+            if (window.innerWidth < 900) return;
+
+            const rect = card.getBoundingClientRect();
+
+            const x =
+                (event.clientX - rect.left) / rect.width - 0.5;
+
+            const y =
+                (event.clientY - rect.top) / rect.height - 0.5;
+
+            card.style.transform =
+                `perspective(1200px)
+                 rotateX(${y * -2}deg)
+                 rotateY(${x * 2}deg)
+                 translateY(-7px)`;
+
+        });
+
+        card.addEventListener("mouseleave", function () {
+
+            card.style.transform = "";
+
+        });
+
+    });
+
+
+    /* BACK TO TOP */
+    backToTop.addEventListener("click", function () {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+});
+</script>
+
+</body>
+</html>

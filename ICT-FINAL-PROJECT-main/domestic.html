@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Domestic Tours | The Nouvelliste</title>
+
+    <link rel="stylesheet" href="style1.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav id="navbar">
+
+        <a href="home.html" class="brand">
+            <img id="logo" src="images/logo.png" alt="The Nouvelliste">
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+
+            <ul class="nav-links">
+
+                <li><a href="home.html">Home</a></li>
+                <li><a href="domestic.html" class="active">Domestic</a></li>
+                <li><a href="international.html">International</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+
+                <li>
+                    <a href="trip.html" class="nav-cta">
+                        Plan Your Trip
+                        <span>↗</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <header class="domestic-hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                Explore Pakistan
+            </div>
+
+            <h1>
+                Discover the
+                <em>extraordinary</em>
+                at home.
+            </h1>
+
+            <p>
+                From the dramatic mountains of Skardu to the peaceful valleys
+                of Hunza and the magical landscapes of Fairy Meadows,
+                discover Pakistan through unforgettable journeys.
+            </p>
+
+            <div class="hero-stats">
+
+                <div>
+                    <strong>05</strong>
+                    <span>Curated Tours</span>
+                </div>
+
+                <div>
+                    <strong>09–10</strong>
+                    <span>Days of Adventure</span>
+                </div>
+
+                <div>
+                    <strong>100%</strong>
+                    <span>Pakistan</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="hero-scroll">
+            <span></span>
+            Scroll to explore
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main>
+
+        <!-- =========================
+             INTRO + SEARCH
+        ========================== -->
+
+        <section class="packages-intro">
+
+            <div class="intro-container">
+
+                <div class="intro-heading">
+
+                    <div class="section-label">
+                        <span></span>
+                        Our Domestic Collection
+                    </div>
+
+                    <h2>
+                        Pakistan is closer
+                        than you <em>think.</em>
+                    </h2>
+
+                </div>
+
+                <div class="intro-side">
+
+                    <p>
+                        Carefully designed experiences for travelers who want
+                        more than just a destination. Choose your next escape
+                        and let the journey begin.
+                    </p>
+
+                    <div class="search-box">
+
+                        <span class="search-icon">⌕</span>
+
+                        <input
+                            type="text"
+                            id="tourSearch"
+                            placeholder="Search a destination..."
+                            aria-label="Search domestic tours">
+
+                        <button id="clearSearch"
+                            type="button"
+                            aria-label="Clear search">
+                            ×
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TOUR COUNT
+        ========================== -->
+
+        <section class="tour-section">
+
+            <div class="tour-section-head">
+
+                <div>
+                    <span class="section-small-title">
+                        Featured journeys
+                    </span>
+
+                    <h2>
+                        Find your next
+                        <em>escape.</em>
+                    </h2>
+                </div>
+
+                <p id="tourCount">
+                    Showing 5 unforgettable journeys
+                </p>
+
+            </div>
+
+
+            <!-- =========================
+                 TOUR LIST
+            ========================== -->
+
+            <div class="main-container"
+                id="tourList">
+
+
+                <!-- TOUR 1 -->
+
+                <article class="tour-package"
+                    data-tour="Skardu Deosai">
+
+                    <div class="tour-number">
+                        01
+                    </div>
+
+                    <div class="package-image">
+
+                        <img src="images/skardu.jpg"
+                            alt="Skardu and Deosai Tour Package">
+
+                        <div class="image-overlay"></div>
+
+                        <div class="duration-badge">
+                            <span class="duration-icon">◷</span>
+                            10 Days
+                        </div>
+
+                    </div>
+
+
+                    <div class="package-details">
+
+                        <div class="package-top">
+
+                            <span class="tour-location">
+                                Northern Pakistan
+                            </span>
+
+                            <span class="availability">
+                                ● Available
+                            </span>
+
+                        </div>
+
+                        <h3 class="package-title">
+                            Skardu & Deosai
+                            <span>2025</span>
+                        </h3>
+
+                        <p class="package-description">
+                            Journey through Skardu, Shigar, Deosai and Kachura.
+                            Experience dramatic mountain landscapes, unforgettable
+                            jeep rides and some of the most breathtaking scenery
+                            Pakistan has to offer.
+                        </p>
+
+                        <div class="package-footer">
+
+                            <div class="price-wrapper">
+                                <span>Starting from</span>
+                                <strong class="price">Rs 37,000</strong>
+                            </div>
+
+                            <a href="skardu_details.html"
+                                class="view-more-btn">
+
+                                Explore Journey
+                                <span>↗</span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- TOUR 2 -->
+
+                <article class="tour-package"
+                    data-tour="Fairy Meadows Nanga Parbat">
+
+                    <div class="tour-number">
+                        02
+                    </div>
+
+                    <div class="package-image">
+
+                        <img src="images/fairy meadows.jpg"
+                            alt="Fairy Meadows Tour Package">
+
+                        <div class="image-overlay"></div>
+
+                        <div class="duration-badge">
+                            <span class="duration-icon">◷</span>
+                            10 Days
+                        </div>
+
+                    </div>
+
+
+                    <div class="package-details">
+
+                        <div class="package-top">
+
+                            <span class="tour-location">
+                                Gilgit Baltistan
+                            </span>
+
+                            <span class="availability">
+                                ● Available
+                            </span>
+
+                        </div>
+
+                        <h3 class="package-title">
+                            Fairy Meadows
+                            <span>2025</span>
+                        </h3>
+
+                        <p class="package-description">
+                            Discover Fairy Meadows, Raikot Bridge and the legendary
+                            Nanga Parbat Base Camp. A journey designed for travelers
+                            looking for raw landscapes, adventure and unforgettable
+                            mountain views.
+                        </p>
+
+                        <div class="package-footer">
+
+                            <div class="price-wrapper">
+                                <span>Starting from</span>
+                                <strong class="price">Rs 33,000</strong>
+                            </div>
+
+                            <a href="meadows_details.html"
+                                class="view-more-btn">
+
+                                Explore Journey
+                                <span>↗</span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- TOUR 3 -->
+
+                <article class="tour-package"
+                    data-tour="Hunza Skardu Attabad Lake">
+
+                    <div class="tour-number">
+                        03
+                    </div>
+
+                    <div class="package-image">
+
+                        <img src="images/hunza.jpg"
+                            alt="Hunza and Skardu Tour Package">
+
+                        <div class="image-overlay"></div>
+
+                        <div class="duration-badge">
+                            <span class="duration-icon">◷</span>
+                            10 Days
+                        </div>
+
+                    </div>
+
+
+                    <div class="package-details">
+
+                        <div class="package-top">
+
+                            <span class="tour-location">
+                                Northern Pakistan
+                            </span>
+
+                            <span class="availability">
+                                ● Available
+                            </span>
+
+                        </div>
+
+                        <h3 class="package-title">
+                            Hunza & Skardu
+                            <span>2025</span>
+                        </h3>
+
+                        <p class="package-description">
+                            Travel across Hunza, Skardu, Shigar, Deosai and Attabad
+                            Lake. A complete northern adventure filled with scenic
+                            valleys, mountain roads and iconic destinations.
+                        </p>
+
+                        <div class="package-footer">
+
+                            <div class="price-wrapper">
+                                <span>Starting from</span>
+                                <strong class="price">Rs 35,000</strong>
+                            </div>
+
+                            <a href="hunza_details.html"
+                                class="view-more-btn">
+
+                                Explore Journey
+                                <span>↗</span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- TOUR 4 -->
+
+                <article class="tour-package"
+                    data-tour="Kashmir Arungkel Taobatt Ratti Gali">
+
+                    <div class="tour-number">
+                        04
+                    </div>
+
+                    <div class="package-image">
+
+                        <img src="images/kashmir.jpg"
+                            alt="Kashmir Arungkel and Taobatt Tour Package">
+
+                        <div class="image-overlay"></div>
+
+                        <div class="duration-badge">
+                            <span class="duration-icon">◷</span>
+                            09 Days
+                        </div>
+
+                    </div>
+
+
+                    <div class="package-details">
+
+                        <div class="package-top">
+
+                            <span class="tour-location">
+                                Azad Kashmir
+                            </span>
+
+                            <span class="availability">
+                                ● Available
+                            </span>
+
+                        </div>
+
+                        <h3 class="package-title">
+                            Kashmir
+                            <span>2025</span>
+                        </h3>
+
+                        <p class="package-description">
+                            Explore Arung Kel, Taobat, Ratti Gali Lake, Kutton and
+                            Keran. Experience the green valleys, rivers and
+                            breathtaking landscapes of Azad Kashmir.
+                        </p>
+
+                        <div class="package-footer">
+
+                            <div class="price-wrapper">
+                                <span>Starting from</span>
+                                <strong class="price">Rs 30,500</strong>
+                            </div>
+
+                            <a href="kashmir_details.html"
+                                class="view-more-btn">
+
+                                Explore Journey
+                                <span>↗</span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- TOUR 5 -->
+
+                <article class="tour-package"
+                    data-tour="Hunza Naltar Valley Attabad">
+
+                    <div class="tour-number">
+                        05
+                    </div>
+
+                    <div class="package-image">
+
+                        <img src="images/hunza.jpg"
+                            alt="Hunza and Naltar Valley Tour Package">
+
+                        <div class="image-overlay"></div>
+
+                        <div class="duration-badge">
+                            <span class="duration-icon">◷</span>
+                            10 Days
+                        </div>
+
+                    </div>
+
+
+                    <div class="package-details">
+
+                        <div class="package-top">
+
+                            <span class="tour-location">
+                                Gilgit Baltistan
+                            </span>
+
+                            <span class="availability">
+                                ● Available
+                            </span>
+
+                        </div>
+
+                        <h3 class="package-title">
+                            Hunza & Naltar Valley
+                            <span>2025</span>
+                        </h3>
+
+                        <p class="package-description">
+                            Discover Attabad Lake, Hunza and the beautiful Naltar
+                            Valley. Enjoy a perfect combination of mountain scenery,
+                            adventure and the natural beauty of northern Pakistan.
+                        </p>
+
+                        <div class="package-footer">
+
+                            <div class="price-wrapper">
+                                <span>Starting from</span>
+                                <strong class="price">Rs 35,000</strong>
+                            </div>
+
+                            <a href="naltar_details.html"
+                                class="view-more-btn">
+
+                                Explore Journey
+                                <span>↗</span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- NO RESULTS -->
+
+                <div class="no-results"
+                    id="noResults">
+
+                    <span>⌕</span>
+
+                    <h3>No journeys found</h3>
+
+                    <p>
+                        Try searching for Skardu, Hunza, Kashmir or Fairy Meadows.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CUSTOM TRIP CTA
+        ========================== -->
+
+        <section class="custom-trip">
+
+            <div class="custom-trip-content">
+
+                <div class="section-label light">
+                    <span></span>
+                    Want something different?
+                </div>
+
+                <h2>
+                    Don't just book a trip.
+                    <em>Create your own story.</em>
+                </h2>
+
+                <p>
+                    Tell us where you want to go and what kind of journey you
+                    imagine. We'll help you create a trip designed around you.
+                </p>
+
+                <a href="trip.html"
+                    class="custom-trip-btn">
+
+                    Make Your Own Trip
+                    <span>↗</span>
+
+                </a>
+
+            </div>
+
+
+            <div class="custom-trip-art">
+
+                <div class="circle circle-one"></div>
+                <div class="circle circle-two"></div>
+
+                <div class="travel-word">
+                    GO
+                </div>
+
+                <div class="floating-tag tag-one">
+                    ⛰ Adventure
+                </div>
+
+                <div class="floating-tag tag-two">
+                    ✦ Explore
+                </div>
+
+                <div class="floating-tag tag-three">
+                    ◉ Discover
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <a href="home.html">
+                    <img src="images/logo.png"
+                        alt="The Nouvelliste">
+                </a>
+
+                <p>
+                    Discover Pakistan and beyond through journeys designed
+                    to become stories worth remembering.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Explore</h3>
+
+                <a href="domestic.html">Domestic Tours</a>
+                <a href="international.html">International Tours</a>
+                <a href="blogs.html">Travel Stories</a>
+                <a href="trip.html">Plan Your Trip</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Company</h3>
+
+                <a href="contact.html">Contact Us</a>
+                <a href="blogs.html">Travel Blog</a>
+                <a href="trip.html">Custom Journey</a>
+
+            </div>
+
+
+            <div class="footer-column footer-contact">
+
+                <h3>Start Exploring</h3>
+
+                <p>
+                    Your next journey could begin today.
+                </p>
+
+                <a href="contact.html"
+                    class="footer-contact-link">
+
+                    Contact Us
+                    <span>↗</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 The Nouvelliste. All rights reserved.
+            </p>
+
+            <a href="#top"
+                id="footerTop">
+                Back to top ↑
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- BACK TO TOP -->
+
+    <button class="back-to-top"
+        id="backToTop"
+        aria-label="Back to top">
+
+        ↑
+
+    </button>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        /* MOBILE MENU */
+
+        const menuToggle = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("navMenu");
+        const navbar = document.getElementById("navbar");
+
+        menuToggle.addEventListener("click", function () {
+
+            navMenu.classList.toggle("open");
+            navbar.classList.toggle("menu-open");
+
+            const isOpen = navMenu.classList.contains("open");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+            document.body.classList.toggle(
+                "menu-active",
+                isOpen
+            );
+
+        });
+
+
+        /* CLOSE MENU WHEN LINK IS CLICKED */
+
+        document.querySelectorAll(".nav-links a").forEach(link => {
+
+            link.addEventListener("click", function () {
+
+                navMenu.classList.remove("open");
+                navbar.classList.remove("menu-open");
+                document.body.classList.remove("menu-active");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            });
+
+        });
+
+
+        /* STICKY NAVBAR */
+
+        window.addEventListener("scroll", function () {
+
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+
+        });
+
+
+        /* TOUR SEARCH */
+
+        const searchInput =
+            document.getElementById("tourSearch");
+
+        const clearSearch =
+            document.getElementById("clearSearch");
+
+        const tours =
+            document.querySelectorAll(".tour-package");
+
+        const noResults =
+            document.getElementById("noResults");
+
+        const tourCount =
+            document.getElementById("tourCount");
+
+
+        function filterTours() {
+
+            const query =
+                searchInput.value
+                    .toLowerCase()
+                    .trim();
+
+            let visibleTours = 0;
+
+
+            tours.forEach(tour => {
+
+                const searchableText =
+                    (
+                        tour.innerText +
+                        " " +
+                        tour.dataset.tour
+                    )
+                    .toLowerCase();
+
+
+                if (searchableText.includes(query)) {
+
+                    tour.style.display = "";
+                    visibleTours++;
+
+                } else {
+
+                    tour.style.display = "none";
+
+                }
+
+            });
+
+
+            noResults.style.display =
+                visibleTours === 0
+                    ? "flex"
+                    : "none";
+
+
+            tourCount.textContent =
+                visibleTours === 1
+                    ? "Showing 1 journey"
+                    : `Showing ${visibleTours} unforgettable journeys`;
+
+        }
+
+
+        searchInput.addEventListener(
+            "input",
+            filterTours
+        );
+
+
+        clearSearch.addEventListener(
+            "click",
+            function () {
+
+                searchInput.value = "";
+                filterTours();
+                searchInput.focus();
+
+            }
+        );
+
+
+        /* BACK TO TOP */
+
+        const backToTop =
+            document.getElementById("backToTop");
+
+
+        window.addEventListener(
+            "scroll",
+            function () {
+
+                if (window.scrollY > 500) {
+
+                    backToTop.classList.add("show");
+
+                } else {
+
+                    backToTop.classList.remove("show");
+
+                }
+
+            }
+        );
+
+
+        backToTop.addEventListener(
+            "click",
+            function () {
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+            }
+        );
+
+
+        /* SIMPLE SCROLL REVEAL */
+
+        const revealElements =
+            document.querySelectorAll(
+                ".tour-package, .intro-heading, .intro-side"
+            );
+
+
+        const revealObserver =
+            new IntersectionObserver(
+
+                entries => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add(
+                                "visible"
+                            );
+
+                            revealObserver.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.12
+                }
+
+            );
+
+
+        revealElements.forEach(element => {
+
+            element.classList.add("reveal");
+
+            revealObserver.observe(element);
+
+        });
+
+    </script>
+
+</body>
+
+</html>

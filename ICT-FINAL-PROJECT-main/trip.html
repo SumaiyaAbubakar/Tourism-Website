@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create your own personalized travel journey with Travel Explorer.">
+    <title>Make Your Own Trip | Travel Explorer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="trip.css">
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- Trip form logic -->
+    <script src="logic.js" defer></script>
+</head>
+
+<body>
+
+<header class="site-header">
+    <a class="brand" href="#">
+        <span class="brand-mark">T</span>
+        <span>
+            <strong>TRAVEL</strong>
+            <small>EXPLORER</small>
+        </span>
+    </a>
+
+    <div class="header-pill">
+        <span class="status-dot"></span>
+        Personalized journeys
+    </div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="hero-orb hero-orb-one"></div>
+        <div class="hero-orb hero-orb-two"></div>
+        <div class="hero-grid"></div>
+
+        <div class="hero-inner">
+            <div class="hero-copy">
+                <span class="eyebrow">THE JOURNEY IS YOURS</span>
+                <h1>Make your own<br><em>adventure.</em></h1>
+                <p>
+                    Design a journey around the places you want to see,
+                    the people you travel with and the moments you want
+                    to remember.
+                </p>
+
+                <div class="hero-meta">
+                    <span>01 — Choose</span>
+                    <span>02 — Personalize</span>
+                    <span>03 — Explore</span>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <div class="hero-card-number">∞</div>
+                <span>YOUR TRIP</span>
+                <strong>One itinerary.<br>Entirely yours.</strong>
+            </div>
+        </div>
+
+        <div class="scroll-cue">
+            <span></span>
+            Scroll to build
+        </div>
+    </section>
+
+    <section class="builder-wrap">
+
+        <div class="builder-layout">
+
+            <form id="tripForm" novalidate>
+
+                <!-- 01 PERSONAL DETAILS -->
+                <section class="form-section reveal">
+                    <div class="section-heading">
+                        <div class="section-number">01</div>
+                        <div>
+                            <span class="section-kicker">START WITH YOU</span>
+                            <h2>Personal details</h2>
+                            <p>Tell us who will be joining this adventure.</p>
+                        </div>
+                    </div>
+
+                    <div class="field-grid two">
+
+                        <div class="input-box">
+                            <label for="firstName">First name <b>*</b></label>
+                            <input
+                                type="text"
+                                id="firstName"
+                                name="first_name"
+                                required
+                                autocomplete="given-name"
+                                placeholder="e.g. Sumaiya"
+                            >
+                        </div>
+
+                        <div class="input-box">
+                            <label for="lastName">Last name <b>*</b></label>
+                            <input
+                                type="text"
+                                id="lastName"
+                                name="last_name"
+                                required
+                                autocomplete="family-name"
+                                placeholder="e.g. Abubakar"
+                            >
+                        </div>
+
+                        <div class="input-box">
+                            <label for="phone">Phone / mobile <b>*</b></label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                required
+                                autocomplete="tel"
+                                placeholder="+92 300 0000000"
+                            >
+                        </div>
+
+                        <div class="input-box">
+                            <label for="email">Email <b>*</b></label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                                autocomplete="email"
+                                placeholder="you@example.com"
+                            >
+                        </div>
+
+                    </div>
+                </section>
+
+
+                <!-- 02 DESTINATIONS -->
+                <section class="form-section reveal">
+                    <div class="section-heading">
+                        <div class="section-number">02</div>
+                        <div>
+                            <span class="section-kicker">CHOOSE YOUR HORIZON</span>
+                            <h2>Where will you go?</h2>
+                            <p>Select one or more destinations. Your route can evolve around them.</p>
+                        </div>
+                    </div>
+
+                    <div class="destination-grid" id="areaTags">
+                        <button type="button" class="tag-btn"><span>01</span>Hunza</button>
+                        <button type="button" class="tag-btn"><span>02</span>Skardu</button>
+                        <button type="button" class="tag-btn"><span>03</span>Kashmir</button>
+                        <button type="button" class="tag-btn"><span>04</span>Swat Kalam</button>
+                        <button type="button" class="tag-btn"><span>05</span>Kalash Chitral</button>
+                        <button type="button" class="tag-btn"><span>06</span>Kumrat Valley</button>
+                        <button type="button" class="tag-btn"><span>07</span>Naran Kaghan</button>
+                        <button type="button" class="tag-btn"><span>08</span>Fairy Meadows</button>
+                        <button type="button" class="tag-btn"><span>09</span>Naltar Valley</button>
+                        <button type="button" class="tag-btn"><span>10</span>Shogran Valley</button>
+                    </div>
+
+                    <input
+                        type="hidden"
+                        id="selectedAreas"
+                        name="selected_areas"
+                    >
+
+                    <div class="selection-note">
+                        <span class="note-icon">+</span>
+                        <span>
+                            <strong>Multi-destination</strong>
+                            You can select several places and create one seamless route.
+                        </span>
+                    </div>
+                </section>
+
+
+                <!-- 03 TRIP DETAILS -->
+                <section class="form-section reveal">
+                    <div class="section-heading">
+                        <div class="section-number">03</div>
+                        <div>
+                            <span class="section-kicker">SHAPE THE EXPERIENCE</span>
+                            <h2>Trip details</h2>
+                            <p>Set the rhythm, transport and people travelling with you.</p>
+                        </div>
+                    </div>
+
+                    <div class="field-grid two">
+
+                        <div class="input-box">
+                            <label for="duration">Tour duration <b>*</b></label>
+                            <div class="input-with-suffix">
+                                <input
+                                    type="number"
+                                    id="duration"
+                                    name="duration"
+                                    required
+                                    min="1"
+                                    max="60"
+                                    placeholder="7"
+                                >
+                                <span>days</span>
+                            </div>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="date">Preferred departure <b>*</b></label>
+                            <input
+                                type="date"
+                                id="date"
+                                name="departure_date"
+                                required
+                            >
+                        </div>
+
+                        <div class="input-box">
+                            <label for="pickup">Pick-up city <b>*</b></label>
+                            <select
+                                id="pickup"
+                                name="pickup_city"
+                                required
+                            >
+                                <option value="">Choose your city</option>
+                                <option>Lahore</option>
+                                <option>Karachi</option>
+                                <option>Islamabad</option>
+                            </select>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="vehicle">Vehicle type <b>*</b></label>
+                            <select
+                                id="vehicle"
+                                name="vehicle"
+                                required
+                            >
+                                <option value="">Choose a vehicle</option>
+                                <option>Car</option>
+                                <option>Jeep</option>
+                                <option>Hiace</option>
+                            </select>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="adults">Adults <b>*</b></label>
+                            <input
+                                type="number"
+                                id="adults"
+                                name="adults"
+                                required
+                                min="1"
+                                max="30"
+                                placeholder="2"
+                            >
+                        </div>
+
+                        <div class="input-box">
+                            <label for="kids">Children (age 2–9) <b>*</b></label>
+                            <input
+                                type="number"
+                                id="kids"
+                                name="kids"
+                                required
+                                min="0"
+                                max="30"
+                                placeholder="0"
+                            >
+                        </div>
+
+                        <div class="input-box">
+                            <label for="room">Rooms <b>*</b></label>
+                            <input
+                                type="number"
+                                id="room"
+                                name="rooms"
+                                required
+                                min="1"
+                                max="10"
+                                placeholder="1"
+                            >
+                        </div>
+
+                        <div class="input-box">
+                            <label for="tourType">Trip style <b>*</b></label>
+                            <select
+                                id="tourType"
+                                name="trip_style"
+                                required
+                            >
+                                <option value="">Choose your experience</option>
+                                <option>Northern Areas</option>
+                                <option>Skardu Tour</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </section>
+
+
+                <!-- 04 PACKAGE -->
+                <section class="form-section reveal">
+                    <div class="section-heading">
+                        <div class="section-number">04</div>
+                        <div>
+                            <span class="section-kicker">CHOOSE YOUR LEVEL</span>
+                            <h2>Travel your way</h2>
+                            <p>Choose the experience that best matches your style.</p>
+                        </div>
+                    </div>
+
+                    <div class="package-grid">
+
+                        <label class="package-card">
+                            <input type="radio" name="package" value="Standard">
+                            <span class="package-check">✓</span>
+                            <span class="package-index">01</span>
+                            <strong>Standard</strong>
+                            <p>Comfortable essentials for a relaxed and memorable journey.</p>
+                            <small>SMART & SIMPLE</small>
+                        </label>
+
+                        <label class="package-card">
+                            <input type="radio" name="package" value="Deluxe">
+                            <span class="package-check">✓</span>
+                            <span class="package-index">02</span>
+                            <strong>Deluxe</strong>
+                            <p>More comfort, more flexibility and elevated experiences.</p>
+                            <small>MORE TO EXPERIENCE</small>
+                        </label>
+
+                        <label class="package-card">
+                            <input type="radio" name="package" value="Luxury">
+                            <span class="package-check">✓</span>
+                            <span class="package-index">03</span>
+                            <strong>Luxury</strong>
+                            <p>A refined journey built around premium comfort and detail.</p>
+                            <small>THE SIGNATURE EXPERIENCE</small>
+                        </label>
+
+                    </div>
+                </section>
+
+
+                <!-- 05 SPECIAL REQUIREMENTS -->
+                <section class="form-section reveal">
+                    <div class="section-heading">
+                        <div class="section-number">05</div>
+                        <div>
+                            <span class="section-kicker">MAKE IT PERSONAL</span>
+                            <h2>Special requirements</h2>
+                            <p>Anything else you want us to know?</p>
+                        </div>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="special">Your notes</label>
+                        <textarea
+                            id="special"
+                            name="special_requirements"
+                            placeholder="Dietary preferences, activities, hotel preferences, celebrations, accessibility needs..."
+                        ></textarea>
+                    </div>
+                </section>
+
+
+                <div class="submit-area">
+                    <div>
+                        <span class="submit-kicker">READY WHEN YOU ARE</span>
+                        <p>Your selections are saved automatically in this browser.</p>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span>Create my journey</span>
+                        <i>→</i>
+                    </button>
+                </div>
+
+            </form>
+
+
+            <!-- LIVE SUMMARY -->
+            <aside class="trip-sidebar">
+
+                <div class="sticky-summary" id="tripLiveSummary">
+
+                    <div class="summary-top">
+                        <div>
+                            <span class="summary-eyebrow">YOUR JOURNEY</span>
+                            <h3>Trip preview</h3>
+                        </div>
+
+                        <div
+                            class="summary-progress"
+                            id="summaryProgress"
+                        >
+                            0%
+                        </div>
+                    </div>
+
+                    <div class="summary-progress-bar">
+                        <span id="summaryProgressFill"></span>
+                    </div>
+
+                    <div
+                        class="summary-status"
+                        id="summaryStatus"
+                    >
+                        Start building your adventure.
+                    </div>
+
+                    <div
+                        class="summary-content"
+                        id="summaryContent"
+                    ></div>
+
+                    <div class="summary-destinations">
+                        <span>SELECTED DESTINATIONS</span>
+                        <div id="summaryDestinationList">
+                            None yet
+                        </div>
+                    </div>
+
+                    <div class="summary-footer">
+                        <span>TRAVEL EXPLORER</span>
+                        <strong>Designed around you.</strong>
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </div>
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+    <span>TRAVEL EXPLORER</span>
+    <p>Build a journey that feels entirely yours.</p>
+</footer>
+
+</body>
+</html>

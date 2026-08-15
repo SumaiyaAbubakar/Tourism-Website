@@ -1,0 +1,2702 @@
+/* =========================================================
+   GREECE TRAVEL JOURNAL
+   LUXURY / EDITORIAL / MEDITERRANEAN DESIGN
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+    --blue: #087f9b;
+    --blue-dark: #04566b;
+    --blue-light: #66c9d8;
+
+    --sea: #0b7187;
+
+    --sand: #f5efe3;
+    --cream: #faf8f1;
+
+    --white: #ffffff;
+
+    --ink: #102b32;
+    --muted: #66777b;
+
+    --gold: #d4a65d;
+
+    --orange: #df8d58;
+
+    --line: rgba(16,43,50,.12);
+
+    --shadow:
+        0 30px 80px rgba(10,50,60,.14);
+
+    --ease:
+        cubic-bezier(.2,.8,.2,1);
+
+    --smooth:
+        cubic-bezier(.16,1,.3,1);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+    color: var(--ink);
+
+    background:
+
+        radial-gradient(
+            circle at 0 15%,
+            rgba(102,201,216,.12),
+            transparent 25rem
+        ),
+
+        radial-gradient(
+            circle at 100% 55%,
+            rgba(212,166,93,.10),
+            transparent 25rem
+        ),
+
+        var(--cream);
+
+    overflow-x: hidden;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+}
+
+
+a {
+
+    color: inherit;
+}
+
+
+::selection {
+
+    background: var(--blue);
+
+    color: white;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+
+    width: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+
+    background: #e9f0ef;
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            var(--blue),
+            var(--gold)
+        );
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+#navbar {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    min-height: 82px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding:
+        10px
+        clamp(18px,5vw,70px);
+
+    background:
+        rgba(250,248,241,.76);
+
+    border-bottom:
+        1px solid
+        rgba(16,43,50,.08);
+
+    backdrop-filter:
+        blur(22px)
+        saturate(150%);
+
+    -webkit-backdrop-filter:
+        blur(22px)
+        saturate(150%);
+
+    transition:
+        box-shadow .4s ease;
+}
+
+
+#navbar::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -1px;
+
+    width: 100%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(8,127,155,.45),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.brand {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.brand img {
+    width: clamp(150px, 16vw, 220px);
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   NAV MENU
+========================================================= */
+
+.nav-menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap:
+        clamp(18px,3vw,40px);
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    gap:
+        clamp(16px,2.5vw,35px);
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.nav-links a {
+
+    position: relative;
+
+    display: inline-block;
+
+    padding: 12px 0;
+
+    color: var(--ink);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition:
+        color .3s ease;
+}
+
+
+.nav-links a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 3px;
+
+    width: 0;
+
+    height: 2px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--blue),
+            var(--gold)
+        );
+
+    transform:
+        translateX(-50%);
+
+    transition:
+        width .4s var(--ease);
+}
+
+
+.nav-links a:hover,
+.nav-links a.active {
+
+    color: var(--blue-dark);
+}
+
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   TRIP BUTTON
+========================================================= */
+
+.trip-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 46px;
+
+    padding:
+        0 20px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue-dark),
+            var(--blue)
+        );
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 10px 30px
+        rgba(8,127,155,.22);
+
+    transition:
+        transform .35s var(--ease),
+        box-shadow .35s ease;
+}
+
+
+.trip-button span {
+
+    font-size: 16px;
+
+    transition:
+        transform .35s var(--ease);
+}
+
+
+.trip-button:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 17px 35px
+        rgba(8,127,155,.30);
+}
+
+
+.trip-button:hover span {
+
+    transform:
+        translate(3px,-3px);
+}
+
+
+/* =========================================================
+   MOBILE NAV BUTTON
+========================================================= */
+
+.nav-toggle {
+
+    display: none;
+
+    width: 44px;
+
+    height: 44px;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: var(--blue-dark);
+
+    cursor: pointer;
+
+    padding: 9px;
+}
+
+
+.nav-toggle span {
+
+    display: block;
+
+    height: 2px;
+
+    margin: 5px 0;
+
+    border-radius: 10px;
+
+    background: white;
+
+    transition:
+        transform .35s var(--ease),
+        opacity .2s ease;
+}
+
+
+.nav-toggle.open span:first-child {
+
+    transform:
+        translateY(7px)
+        rotate(45deg);
+}
+
+
+.nav-toggle.open span:nth-child(2) {
+
+    opacity: 0;
+}
+
+
+.nav-toggle.open span:last-child {
+
+    transform:
+        translateY(-7px)
+        rotate(-45deg);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    position: relative;
+
+    height:
+        min(850px, calc(100vh - 82px));
+
+    min-height: 680px;
+
+    overflow: hidden;
+
+    isolation: isolate;
+
+    color: white;
+
+    background: #064b5b;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.hero-image {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -3;
+
+    overflow: hidden;
+}
+
+
+.hero-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    animation:
+        heroZoom 14s ease-out forwards;
+}
+
+
+@keyframes heroZoom {
+
+    from {
+
+        transform:
+            scale(1.13);
+    }
+
+    to {
+
+        transform:
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   HERO OVERLAY
+========================================================= */
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -2;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(3,42,53,.92) 0%,
+            rgba(3,42,53,.68) 38%,
+            rgba(3,42,53,.15) 75%,
+            rgba(3,42,53,.10)
+        ),
+
+        linear-gradient(
+            0deg,
+            rgba(3,25,32,.55),
+            transparent 45%
+        );
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+
+    position: relative;
+
+    width:
+        min(1180px,88%);
+
+    height: 100%;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding-top: 40px;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.breadcrumb {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 35px;
+
+    color:
+        rgba(255,255,255,.58);
+
+    font-size: 10px;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+}
+
+
+.breadcrumb a {
+
+    color: white;
+
+    text-decoration: none;
+
+    transition:
+        color .3s ease;
+}
+
+
+.breadcrumb a:hover {
+
+    color: var(--blue-light);
+}
+
+
+/* =========================================================
+   HERO LABEL
+========================================================= */
+
+.hero-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color:
+        var(--blue-light);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: .3em;
+}
+
+
+.label-line {
+
+    width: 42px;
+
+    height: 1px;
+
+    background:
+        var(--blue-light);
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.hero h1 {
+
+    max-width: 900px;
+
+    margin:
+        22px 0;
+
+    font-size:
+        clamp(58px,8.5vw,115px);
+
+    line-height: .88;
+
+    letter-spacing:
+        -.065em;
+
+    font-weight: 600;
+
+    text-wrap: balance;
+}
+
+
+.hero h1 em {
+
+    display: block;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-weight: 500;
+
+    color:
+        #9fe3ec;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.hero-description {
+
+    max-width: 610px;
+
+    margin: 0;
+
+    color:
+        rgba(255,255,255,.72);
+
+    font-size:
+        clamp(14px,1.7vw,17px);
+
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   HERO ACTIONS
+========================================================= */
+
+.hero-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 35px;
+}
+
+
+.primary-button,
+.secondary-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    min-height: 50px;
+
+    padding:
+        0 22px;
+
+    border-radius: 999px;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    transition:
+        transform .35s var(--ease),
+        background .35s ease,
+        border .35s ease;
+}
+
+
+.primary-button {
+
+    background: white;
+
+    color: var(--blue-dark);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0,0,0,.15);
+}
+
+
+.primary-button span {
+
+    font-size: 17px;
+
+    transition:
+        transform .3s var(--ease);
+}
+
+
+.primary-button:hover {
+
+    transform:
+        translateY(-4px);
+}
+
+
+.primary-button:hover span {
+
+    transform:
+        translateY(4px);
+}
+
+
+.secondary-button {
+
+    border:
+        1px solid
+        rgba(255,255,255,.35);
+
+    color: white;
+
+    background:
+        rgba(255,255,255,.08);
+
+    backdrop-filter:
+        blur(12px);
+}
+
+
+.secondary-button:hover {
+
+    background:
+        rgba(255,255,255,.17);
+
+    border-color:
+        rgba(255,255,255,.6);
+
+    transform:
+        translateY(-4px);
+}
+
+
+/* =========================================================
+   HERO RINGS
+========================================================= */
+
+.hero-ring {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    border:
+        1px solid
+        rgba(255,255,255,.16);
+}
+
+
+.hero-ring-one {
+
+    width: 450px;
+
+    height: 450px;
+
+    right: 4%;
+
+    top: 18%;
+
+    animation:
+        floatRing 8s ease-in-out infinite;
+}
+
+
+.hero-ring-two {
+
+    width: 700px;
+
+    height: 700px;
+
+    right: -14%;
+
+    top: -25%;
+
+    border-color:
+        rgba(102,201,216,.20);
+
+    animation:
+        rotateRing 25s linear infinite;
+}
+
+
+@keyframes floatRing {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+@keyframes rotateRing {
+
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   HERO SCROLL
+========================================================= */
+
+.hero-scroll {
+
+    position: absolute;
+
+    bottom: 28px;
+
+    left: 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color:
+        rgba(255,255,255,.50);
+
+    font-size: 8px;
+
+    letter-spacing: .25em;
+
+    font-weight: 800;
+}
+
+
+.hero-scroll i {
+
+    display: block;
+
+    width: 40px;
+
+    height: 1px;
+
+    background:
+        rgba(255,255,255,.45);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro-section {
+
+    position: relative;
+
+    width:
+        min(1200px,88%);
+
+    margin: auto;
+
+    padding:
+        130px 0;
+
+    display: grid;
+
+    grid-template-columns:
+        90px 1fr 280px;
+
+    gap: 50px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   INTRO NUMBER
+========================================================= */
+
+.intro-number {
+
+    color:
+        rgba(8,127,155,.25);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 55px;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.section-label {
+
+    display: inline-block;
+
+    color:
+        var(--blue);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: .25em;
+}
+
+
+/* =========================================================
+   INTRO CONTENT
+========================================================= */
+
+.intro-content h2 {
+
+    max-width: 700px;
+
+    margin:
+        15px 0 30px;
+
+    font-size:
+        clamp(40px,5vw,67px);
+
+    line-height: .98;
+
+    letter-spacing:
+        -.055em;
+}
+
+
+.intro-content h2 em {
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-weight: 500;
+
+    color:
+        var(--blue);
+}
+
+
+.intro-content p {
+
+    max-width: 700px;
+
+    color:
+        var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    margin:
+        0 0 18px;
+}
+
+
+/* =========================================================
+   FACTS CARD
+========================================================= */
+
+.facts-card {
+
+    padding:
+        25px;
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius: 22px;
+
+    background:
+        rgba(255,255,255,.72);
+
+    box-shadow:
+        var(--shadow);
+
+    backdrop-filter:
+        blur(15px);
+}
+
+
+.fact {
+
+    padding:
+        17px 0;
+
+    border-bottom:
+        1px solid
+        var(--line);
+}
+
+
+.fact:last-child {
+
+    border-bottom: 0;
+}
+
+
+.fact strong {
+
+    display: block;
+
+    color:
+        var(--blue-dark);
+
+    font-size: 25px;
+}
+
+
+.fact span {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color:
+        var(--muted);
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .12em;
+}
+
+
+/* =========================================================
+   TRAVEL TIP
+========================================================= */
+
+.tip-section {
+
+    position: relative;
+
+    width:
+        min(1100px,88%);
+
+    margin:
+        0 auto 120px;
+
+    padding:
+        28px 32px;
+
+    display: grid;
+
+    grid-template-columns:
+        60px 1fr 40px;
+
+    gap: 25px;
+
+    align-items: center;
+
+    border-radius: 24px;
+
+    background:
+
+        linear-gradient(
+            120deg,
+            #e8f7f8,
+            #f8f2e6
+        );
+
+    border:
+        1px solid
+        rgba(8,127,155,.10);
+
+    box-shadow:
+        0 20px 50px
+        rgba(8,80,95,.08);
+
+    overflow: hidden;
+}
+
+
+.tip-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 5px;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            var(--blue),
+            var(--gold)
+        );
+}
+
+
+.tip-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: var(--gold);
+
+    font-size: 23px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(8,80,95,.10);
+}
+
+
+.tip-section span {
+
+    color:
+        var(--blue);
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: .2em;
+}
+
+
+.tip-section h3 {
+
+    margin:
+        6px 0;
+
+    font-size: 20px;
+}
+
+
+.tip-section p {
+
+    margin: 0;
+
+    color:
+        var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+.tip-arrow {
+
+    font-size: 28px;
+
+    color:
+        var(--blue);
+
+    transition:
+        transform .4s var(--ease);
+}
+
+
+.tip-section:hover .tip-arrow {
+
+    transform:
+        translateX(7px);
+}
+
+
+/* =========================================================
+   BEACHES
+========================================================= */
+
+.beaches-section {
+
+    width:
+        min(1200px,88%);
+
+    margin: auto;
+
+    padding-bottom: 130px;
+}
+
+
+.section-heading {
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin-bottom: 45px;
+}
+
+
+.section-heading h2 {
+
+    margin:
+        12px 0 0;
+
+    font-size:
+        clamp(40px,5vw,66px);
+
+    line-height: .95;
+
+    letter-spacing:
+        -.055em;
+}
+
+
+.section-heading h2 em {
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-weight: 500;
+
+    color:
+        var(--blue);
+}
+
+
+.section-heading > p {
+
+    max-width: 280px;
+
+    margin: 0;
+
+    color:
+        var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   BEACH GRID
+========================================================= */
+
+.beach-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap: 28px;
+}
+
+
+/* =========================================================
+   BEACH CARD
+========================================================= */
+
+.beach-card {
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    background: white;
+
+    border:
+        1px solid
+        var(--line);
+
+    box-shadow:
+        0 15px 45px
+        rgba(10,50,60,.07);
+
+    transition:
+        transform .55s var(--smooth),
+        box-shadow .55s ease;
+}
+
+
+.beach-card:hover {
+
+    transform:
+        translateY(-10px);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+/* =========================================================
+   BEACH IMAGE
+========================================================= */
+
+.beach-image {
+
+    position: relative;
+
+    height: 300px;
+
+    overflow: hidden;
+}
+
+
+.beach-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(4,40,50,.65),
+            transparent 55%
+        );
+}
+
+
+.beach-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 1s var(--smooth),
+        filter .6s ease;
+}
+
+
+.beach-card:hover .beach-image img {
+
+    transform:
+        scale(1.08);
+
+    filter:
+        saturate(1.1);
+}
+
+
+/* =========================================================
+   BEACH NUMBER
+========================================================= */
+
+.beach-number {
+
+    position: absolute;
+
+    z-index: 3;
+
+    top: 20px;
+
+    right: 22px;
+
+    color:
+        rgba(255,255,255,.82);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 30px;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   LOCATION TAG
+========================================================= */
+
+.location-tag {
+
+    position: absolute;
+
+    z-index: 3;
+
+    bottom: 18px;
+
+    left: 20px;
+
+    padding:
+        8px 12px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.35);
+
+    border-radius: 999px;
+
+    color: white;
+
+    background:
+        rgba(5,45,55,.35);
+
+    backdrop-filter:
+        blur(10px);
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: .18em;
+}
+
+
+/* =========================================================
+   BEACH CONTENT
+========================================================= */
+
+.beach-content {
+
+    padding:
+        26px 27px 30px;
+}
+
+
+.beach-content > span {
+
+    color:
+        var(--blue);
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: .2em;
+}
+
+
+.beach-content h3 {
+
+    margin:
+        10px 0;
+
+    font-size: 27px;
+
+    letter-spacing:
+        -.04em;
+}
+
+
+.beach-content p {
+
+    margin: 0;
+
+    color:
+        var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+
+.beach-content a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    color:
+        var(--ink);
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: 800;
+}
+
+
+.beach-content a b {
+
+    font-size: 16px;
+
+    transition:
+        transform .35s var(--ease);
+}
+
+
+.beach-content a:hover b {
+
+    transform:
+        translate(4px,-4px);
+}
+
+
+/* =========================================================
+   LARGE BEACH CARD
+========================================================= */
+
+.beach-large {
+
+    grid-row:
+        span 2;
+}
+
+
+.beach-large .beach-image {
+
+    height: 500px;
+}
+
+
+.beach-large .beach-content {
+
+    padding:
+        32px;
+}
+
+
+.beach-large .beach-content h3 {
+
+    font-size:
+        clamp(30px,4vw,43px);
+}
+
+
+/* =========================================================
+   WIDE BEACH
+========================================================= */
+
+.beach-wide {
+
+    grid-column:
+        span 2;
+
+    display: grid;
+
+    grid-template-columns:
+        1.1fr .9fr;
+}
+
+
+.beach-wide .beach-image {
+
+    height: 360px;
+}
+
+
+/* =========================================================
+   EXPERIENCE SECTION
+========================================================= */
+
+.experience-section {
+
+    position: relative;
+
+    min-height: 650px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.1fr .9fr;
+
+    overflow: hidden;
+
+    background:
+        #073f4e;
+
+    color: white;
+}
+
+
+.experience-image {
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.experience-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(7,63,78,.8)
+        );
+}
+
+
+.experience-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 1.2s var(--smooth);
+}
+
+
+.experience-section:hover
+.experience-image img {
+
+    transform:
+        scale(1.04);
+}
+
+
+.experience-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding:
+        70px clamp(35px,6vw,100px);
+}
+
+
+.experience-content
+.section-label {
+
+    color:
+        var(--blue-light);
+}
+
+
+.experience-content h2 {
+
+    max-width: 500px;
+
+    margin:
+        15px 0 20px;
+
+    font-size:
+        clamp(45px,5vw,70px);
+
+    line-height: .94;
+
+    letter-spacing:
+        -.06em;
+}
+
+
+.experience-content h2 em {
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-weight: 500;
+
+    color:
+        #9fe3ec;
+}
+
+
+.experience-content > p {
+
+    color:
+        rgba(255,255,255,.60);
+
+    font-size: 15px;
+}
+
+
+.experience-line {
+
+    width: 80px;
+
+    height: 1px;
+
+    margin:
+        25px 0;
+
+    background:
+        var(--gold);
+}
+
+
+.experience-meta {
+
+    display: flex;
+
+    gap: 35px;
+}
+
+
+.experience-meta div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.experience-meta strong {
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    color:
+        var(--gold);
+
+    font-size: 25px;
+
+    font-style: italic;
+}
+
+
+.experience-meta span {
+
+    color:
+        rgba(255,255,255,.48);
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .15em;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.final-cta {
+
+    position: relative;
+
+    width:
+        min(1200px,88%);
+
+    margin:
+        120px auto;
+
+    padding:
+        clamp(55px,8vw,100px);
+
+    overflow: hidden;
+
+    border-radius: 35px;
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(102,201,216,.18),
+            transparent 28rem
+        ),
+
+        linear-gradient(
+            135deg,
+            #063f4e,
+            #075f72
+        );
+
+    color: white;
+
+    box-shadow:
+        0 35px 90px
+        rgba(6,63,78,.20);
+}
+
+
+/* Giant decorative text */
+
+.cta-decoration {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    font-size:
+        clamp(100px,18vw,230px);
+
+    font-weight: 800;
+
+    letter-spacing:
+        -.08em;
+
+    color:
+        rgba(255,255,255,.025);
+
+    white-space: nowrap;
+
+    pointer-events: none;
+}
+
+
+.final-cta .section-label {
+
+    position: relative;
+
+    color:
+        var(--blue-light);
+}
+
+
+.final-cta h2 {
+
+    position: relative;
+
+    max-width: 800px;
+
+    margin:
+        17px auto;
+
+    font-size:
+        clamp(45px,6vw,78px);
+
+    line-height: .93;
+
+    letter-spacing:
+        -.06em;
+}
+
+
+.final-cta h2 em {
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-weight: 500;
+
+    color:
+        #a7e6ee;
+}
+
+
+.final-cta p {
+
+    position: relative;
+
+    color:
+        rgba(255,255,255,.58);
+
+    font-size: 13px;
+
+    margin:
+        0 auto 30px;
+}
+
+
+.cta-button {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    min-height: 52px;
+
+    padding:
+        0 25px;
+
+    border-radius: 999px;
+
+    background: white;
+
+    color: var(--blue-dark);
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 15px 35px
+        rgba(0,0,0,.15);
+
+    transition:
+        transform .4s var(--ease),
+        box-shadow .4s ease;
+}
+
+
+.cta-button span {
+
+    font-size: 17px;
+
+    transition:
+        transform .3s var(--ease);
+}
+
+
+.cta-button:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.02);
+
+    box-shadow:
+        0 22px 45px
+        rgba(0,0,0,.20);
+}
+
+
+.cta-button:hover span {
+
+    transform:
+        translate(4px,-4px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    position: relative;
+
+    padding:
+        45px
+        clamp(20px,6vw,80px);
+
+    background:
+        #052f3a;
+
+    color: white;
+}
+
+
+footer::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--blue-light),
+            transparent
+        );
+}
+
+
+.footer-inner {
+
+    width:
+        min(1200px,100%);
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+footer strong {
+
+    font-size: 17px;
+
+    letter-spacing: .14em;
+}
+
+
+footer strong em {
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-weight: 500;
+}
+
+
+footer p {
+
+    margin:
+        7px 0 0;
+
+    color:
+        rgba(255,255,255,.45);
+
+    font-size: 10px;
+}
+
+
+.footer-right {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 10px;
+}
+
+
+.footer-right span {
+
+    color:
+        rgba(255,255,255,.38);
+
+    font-size: 8px;
+
+    letter-spacing: .18em;
+}
+
+
+.footer-right a {
+
+    color:
+        var(--blue-light);
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    transition:
+        color .3s ease;
+}
+
+
+.footer-right a:hover {
+
+    color: white;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .nav-toggle {
+
+        display: block;
+    }
+
+
+    .nav-menu {
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 0;
+
+        right: 0;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 20px;
+
+        padding:
+            25px;
+
+        background:
+            rgba(250,248,241,.97);
+
+        border-bottom:
+            1px solid var(--line);
+
+        box-shadow:
+            0 25px 50px
+            rgba(10,50,60,.12);
+
+        backdrop-filter:
+            blur(20px);
+    }
+
+
+    .nav-menu.open {
+
+        display: flex;
+    }
+
+
+    .nav-links {
+
+        flex-direction: column;
+
+        gap: 2px;
+    }
+
+
+    .nav-links a {
+
+        display: block;
+
+        padding:
+            14px 5px;
+    }
+
+
+    .trip-button {
+
+        width: 100%;
+    }
+
+
+    .intro-section {
+
+        grid-template-columns:
+            60px 1fr;
+    }
+
+
+    .facts-card {
+
+        grid-column:
+            2;
+    }
+
+
+    .experience-section {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .experience-image {
+
+        min-height: 450px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    #navbar {
+
+        min-height: 72px;
+
+        padding:
+            9px 18px;
+    }
+
+
+    .brand img {
+
+        width: 175px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        min-height: 650px;
+
+        height:
+            calc(100vh - 72px);
+    }
+
+
+    .hero-content {
+
+        width: 86%;
+
+        padding-top: 30px;
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            clamp(51px,14vw,70px);
+    }
+
+
+    .hero-description {
+
+        font-size: 14px;
+    }
+
+
+    .hero-actions {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        width: 100%;
+    }
+
+
+    .primary-button,
+    .secondary-button {
+
+        width: 100%;
+    }
+
+
+    .hero-ring-one {
+
+        width: 280px;
+
+        height: 280px;
+
+        right: -80px;
+
+        top: 20%;
+    }
+
+
+    .hero-ring-two {
+
+        display: none;
+    }
+
+
+    .hero-scroll {
+
+        left: 7%;
+    }
+
+
+    /* INTRO */
+
+    .intro-section {
+
+        width: 88%;
+
+        padding:
+            85px 0;
+
+        display: block;
+    }
+
+
+    .intro-number {
+
+        margin-bottom: 15px;
+
+        font-size: 40px;
+    }
+
+
+    .intro-content h2 {
+
+        font-size:
+            clamp(39px,11vw,53px);
+    }
+
+
+    .facts-card {
+
+        margin-top: 35px;
+    }
+
+
+    /* TIP */
+
+    .tip-section {
+
+        width: 88%;
+
+        margin-bottom: 85px;
+
+        padding:
+            24px;
+
+        grid-template-columns:
+            50px 1fr;
+
+        gap: 18px;
+    }
+
+
+    .tip-arrow {
+
+        display: none;
+    }
+
+
+    /* BEACHES */
+
+    .beaches-section {
+
+        width: 88%;
+
+        padding-bottom: 85px;
+    }
+
+
+    .section-heading {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+    }
+
+
+    .section-heading h2 {
+
+        font-size:
+            clamp(39px,11vw,54px);
+    }
+
+
+    .beach-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .beach-large {
+
+        grid-row:
+            auto;
+    }
+
+
+    .beach-large .beach-image {
+
+        height: 330px;
+    }
+
+
+    .beach-wide {
+
+        grid-column:
+            auto;
+
+        display: block;
+    }
+
+
+    .beach-wide .beach-image {
+
+        height: 300px;
+    }
+
+
+    /* EXPERIENCE */
+
+    .experience-image {
+
+        min-height: 350px;
+    }
+
+
+    .experience-content {
+
+        padding:
+            65px 8%;
+    }
+
+
+    .experience-content h2 {
+
+        font-size:
+            clamp(45px,12vw,65px);
+    }
+
+
+    /* CTA */
+
+    .final-cta {
+
+        width: 88%;
+
+        margin:
+            85px auto;
+
+        padding:
+            55px 25px;
+
+        border-radius: 26px;
+    }
+
+
+    .final-cta h2 {
+
+        font-size:
+            clamp(43px,12vw,62px);
+    }
+
+
+    .cta-decoration {
+
+        font-size: 100px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+
+        padding:
+            40px 20px;
+    }
+
+
+    .footer-inner {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .footer-right {
+
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .hero {
+
+        min-height: 610px;
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            48px;
+    }
+
+
+    .hero-label {
+
+        font-size: 8px;
+    }
+
+
+    .intro-content h2 {
+
+        font-size: 39px;
+    }
+
+
+    .tip-section {
+
+        border-radius: 18px;
+    }
+
+
+    .beach-image {
+
+        height: 250px;
+    }
+
+
+    .beach-large .beach-image {
+
+        height: 280px;
+    }
+
+
+    .experience-image {
+
+        min-height: 280px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+a:focus-visible,
+button:focus-visible {
+
+    outline:
+        3px solid
+        var(--gold);
+
+    outline-offset:
+        4px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+
+        scroll-behavior:
+            auto;
+    }
+
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            .01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            .01ms !important;
+    }
+}
