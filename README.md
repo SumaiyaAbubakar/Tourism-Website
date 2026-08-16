@@ -46,6 +46,52 @@ A modern editorial-style tourism website built with HTML, CSS, and JavaScript, f
 </div>
 
 ---
+<div align="center">
+
+<img src="https://img.shields.io/badge/✦%20NOT%20JUST%20A%20TOURISM%20WEBSITE-AN%20EXPERIENCE-0B7A75?style=for-the-badge&labelColor=07111F"/>
+
+<br><br>
+
+<h2>
+🌍 Discover the story behind every destination.
+</h2>
+
+<table>
+<tr>
+<td align="center">
+
+### ✦ IMMERSIVE
+Travel Explorer moves beyond the typical **information-heavy tourism experience**.
+
+</td>
+<td align="center">
+
+### ✦ VISUAL
+Every destination is designed to feel like a **journey to explore**, not just a page to read.
+
+</td>
+<td align="center">
+
+### ✦ INTERACTIVE
+A cleaner, more engaging experience powered by **HTML · CSS · JavaScript**.
+
+</td>
+</tr>
+</table>
+
+<br>
+
+> **Travel Explorer transforms destination browsing into an immersive visual journey — blending modern layouts, interactive experiences, detailed travel guides, maps, galleries, and responsive design into one seamless exploration experience.**
+
+<br>
+
+`DISCOVER` &nbsp; ✦ &nbsp; `EXPLORE` &nbsp; ✦ &nbsp; `INTERACT` &nbsp; ✦ &nbsp; `EXPERIENCE`
+
+<br>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:07111F,50:123B52,100:0B7A75&height=4&section=footer" width="85%"/>
+
+</div>
 
 # 🌎 Discover Travel Explorer
 
